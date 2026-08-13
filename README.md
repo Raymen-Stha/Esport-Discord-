@@ -10,7 +10,6 @@ Developed as an academic portfolio project to demonstrate asynchronous JavaScrip
 * **Backend / Runtime:** Node.js, Express.js
 * **API Integration:** Discord.js (v14), REST APIs
 * **Frontend:** HTML5, CSS3, Vanilla JavaScript
-* **Computer Vision / OCR:** Tesseract.js (`eng.traineddata`)
 * **State & Data Persistence:** File-based JSON data stores with automated backup routines
 * **Authentication:** SMTP-based OTP Email Verification
 
@@ -32,8 +31,8 @@ Developed as an academic portfolio project to demonstrate asynchronous JavaScrip
 * **RESTful Control Panel:** Developed Express REST API endpoints (`api.js`) connecting the live Discord bot instance to an administrative web interface (`webportal/`).
 * **Real-time Monitoring:** Enables real-time visualization of live tournaments, score updates, active voice channels, system health statistics, and audit logs (`stats.js`, `logs.js`).
 
-### 🛡️ Computer Vision & Content Safety
-* **OCR Image Scanning:** Integrated Tesseract OCR (`image.js`) to extract and analyze text embedded in uploaded image attachments, preventing unauthorized content sharing.
+### 🛡️ AI Vision & Content Safety
+* **Ai Image Scanning:** Integrated AI with Gooldes AI studio to download the uploaded image attachments, which are then processed by the AI for checking if it's a spam phishing or any content that is against the TOS, Rules.
 * **Automated Moderation Filters:** Built modular profanity filters (`bad.js`) and link restrictions (`link.js`).
 
 ### 🔊 Dynamic Voice & Support Ticketing
