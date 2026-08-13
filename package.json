@@ -1,0 +1,24 @@
+{
+  "name": "scu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "discord-html-transcripts": "^3.2.0",
+    "discord.js": "^14.26.2",
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^9.0.5",
+    "pm2": "^7.0.3",
+    "sharp": "^0.35.3"
+  }
+}

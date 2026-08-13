@@ -1,0 +1,38 @@
+{
+  "6a902173": {
+    "captainNotified": false,
+    "rosterAlertSent": false,
+    "playersNotified": false,
+    "finalReminderSent": false
+  },
+  "9b13535e": {
+    "captainNotified": false,
+    "rosterAlertSent": false,
+    "playersNotified": false,
+    "finalReminderSent": false
+  },
+  "ee5c7b2c": {
+    "captainNotified": true,
+    "rosterAlertSent": false,
+    "playersNotified": true,
+    "finalReminderSent": true
+  },
+  "7c0c1b21": {
+    "captainNotified": false,
+    "rosterAlertSent": false,
+    "playersNotified": false,
+    "finalReminderSent": false
+  },
+  "a7fc9fa1": {
+    "captainNotified": false,
+    "rosterAlertSent": false,
+    "playersNotified": false,
+    "finalReminderSent": true
+  },
+  "fe3c1f80": {
+    "captainNotified": false,
+    "rosterAlertSent": false,
+    "playersNotified": false,
+    "finalReminderSent": true
+  }
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            background: #004c6d;
+            background: linear-gradient(135deg, #004c6d 0%, #0099a8 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .logo-bg {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .logo-img {
+            max-width: 160px;
+            height: auto;
+        }
+
+        .glass-card {
+            background: #ffffff;
+            /* Fallback for older email clients */
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 50px 40px;
+            border-radius: 32px;
+            text-align: center;
+            color: #004c6d;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-weight: 900;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 26px;
+        }
+
+        .subtitle {
+            color: #004c6d;
+            font-weight: 800;
+            font-size: 14px;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        .otp-container {
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px dashed #0099a8;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 25px 0;
+        }
+
+        .otp {
+            font-size: 56px;
+            font-weight: 900;
+            letter-spacing: 12px;
+            color: #004c6d;
+            margin: 0;
+        }
+
+        .timer {
+            font-size: 14px;
+            color: #004c6d;
+            margin-top: 15px;
+            font-weight: 700;
+            opacity: 0.7;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #ffffff;
+            margin-top: 40px;
+            opacity: 0.8;
+        }
+
+        .note {
+            background: rgba(0, 76, 109, 0.05);
+            padding: 20px;
+            border-radius: 16px;
+            margin-top: 30px;
+            font-size: 13px;
+            color: #004c6d;
+            border-left: 5px solid #ffcc00;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            font-weight: 800;
+            color: #ffcc00;
+            letter-spacing: 1.5px;
+        }
+
+        @media only screen and (max-width: 480px) {
+            .container {
+                padding: 30px 15px;
+            }
+
+            .glass-card {
+                padding: 35px 20px;
+                border-radius: 24px;
+            }
+
+            .logo-img {
+                max-width: 70px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .otp {
+                font-size: 40px;
+                letter-spacing: 8px;
+                margin-right: -8px;
+            }
+
+            .otp-container {
+                padding: 20px 10px;
+            }
+
+            .subtitle {
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
+
+            .note {
+                padding: 15px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-bg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Southern_Cross_vertical.png"
+                    alt="SCU Logo" class="logo-img">
+            </div>
+            <h2>Esports <span style="color: #ffcc00;">Security</span></h2>
+        </div>
+
+        <div class="glass-card">
+            <div class="subtitle">Verification Identity</div>
+            <p style="margin-bottom: 5px; font-weight: 600;">Your SCU Esports Verification Code is:</p>
+            <p style="font-size: 14px; opacity: 0.8; margin-top: 0;">Enter this in the Discord pop-up to continue.</p>
+
+            <div class="otp-container">
+                <div class="otp">{{otp}}</div>
+            </div>
+
+            <div class="timer">
+                ⚡ EXPIRES IN 5:00 MINUTES
+            </div>
+
+            <div class="note">
+                <strong>SECURE ACCESS:</strong> <br> This code was generated for a login attempt on the SCU Esports
+                Discord.
+                <br>If this wasn't you, Ignore this email.
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="social-links">CONNECT WITH THE SQUAD</div>
+            <p>
+                © 2026 Southern Cross University Esports Association<br>
+                Gold Coast • Lismore • Coffs Harbour • Online
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

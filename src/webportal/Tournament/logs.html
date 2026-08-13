@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logs | SCU Tournaments</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/tournament.css">
+</head>
+<body>
+    <!-- Animated Particles -->
+    <div class="bg-particles">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h1>SCU Tournaments</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="t-nav-item"><span class="material-symbols-outlined">dashboard</span> Dashboard</a>
+                <a href="games.html" class="t-nav-item"><span class="material-symbols-outlined">sports_esports</span> Games</a>
+                <a href="tournaments.html" class="t-nav-item"><span class="material-symbols-outlined">emoji_events</span> Tournaments</a>
+                <a href="logs.html" class="t-nav-item active"><span class="material-symbols-outlined">receipt_long</span> Audit Logs</a>
+                <a href="settings.html" class="t-nav-item"><span class="material-symbols-outlined">settings</span> Settings</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../index.html" class="t-nav-item"><span class="material-symbols-outlined">arrow_back</span> Back to Main</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="page-header">
+                <div class="flex items-center gap-2">
+                    <button class="mobile-menu-btn"><span class="material-symbols-outlined">menu</span></button>
+                    <h2>Audit Logs</h2>
+                </div>
+                <div class="page-header-actions">
+                    <div style="position:relative;">
+                        <span class="material-symbols-outlined" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); color:var(--text-muted); font-size:18px;">search</span>
+                        <input type="text" id="logSearch" placeholder="Search logs..." class="search-input" style="padding-left:36px;">
+                    </div>
+                </div>
+            </header>
+
+            <div class="glass-card section-card card-animate">
+                <div class="overflow-auto">
+                    <table class="t-table" id="logsTable">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Action</th>
+                                <th>Details</th>
+                                <th>Actor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td colspan="4" class="loading-text">Loading logs...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="dashboard.js"></script>
+    <script src="logs.js"></script>
+</body>
+</html>

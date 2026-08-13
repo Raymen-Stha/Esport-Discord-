@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Southern Cross Esports | Level Up Your Game</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@100..800&family=Geist:wght@100..900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#003549",
+                        "on-secondary-fixed": "#231b00",
+                        "surface-container-lowest": "#060e20",
+                        "on-tertiary": "#303300",
+                        "on-tertiary-container": "#beca00",
+                        "surface": "#0b1326",
+                        "on-primary-fixed-variant": "#004d68",
+                        "primary-fixed-dim": "#91cef1",
+                        "surface-container": "#171f33",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#31394d",
+                        "outline-variant": "#40484d",
+                        "secondary-fixed": "#ffe07f",
+                        "error-container": "#93000a",
+                        "on-surface": "#dae2fd",
+                        "surface-dim": "#0b1326",
+                        "inverse-primary": "#206584",
+                        "on-tertiary-fixed": "#1b1d00",
+                        "primary-container": "#005573",
+                        "surface-variant": "#2d3449",
+                        "background": "#0b1326",
+                        "surface-tint": "#91cef1",
+                        "surface-container-highest": "#2d3449",
+                        "surface-container-high": "#222a3d",
+                        "tertiary-fixed-dim": "#c4d000",
+                        "on-secondary-container": "#6f5900",
+                        "on-primary-container": "#8bc8eb",
+                        "tertiary-container": "#4e5300",
+                        "primary-fixed": "#c3e8ff",
+                        "secondary-fixed-dim": "#edc200",
+                        "surface-container-low": "#131b2e",
+                        "tertiary-fixed": "#e0ed1d",
+                        "tertiary": "#c4d000",
+                        "on-surface-variant": "#c0c7ce",
+                        "primary": "#91cef1",
+                        "secondary-container": "#fed000",
+                        "inverse-surface": "#dae2fd",
+                        "inverse-on-surface": "#283044",
+                        "outline": "#8a9298",
+                        "on-secondary-fixed-variant": "#564500",
+                        "on-primary-fixed": "#001e2c",
+                        "on-secondary": "#3c2f00",
+                        "on-tertiary-fixed-variant": "#464a00",
+                        "on-error": "#690005",
+                        "secondary": "#fff0c9",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#dae2fd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "unit": "4px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "display-lg": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-md": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glow-sm {
+            filter: drop-shadow(0 0 5px rgba(145, 206, 241, 0.4));
+        }
+
+        .glow-primary {
+            box-shadow: 0 0 20px rgba(145, 206, 241, 0.3);
+        }
+
+        .glass-card {
+            background: rgba(23, 31, 51, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(145, 206, 241, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #fed000 0%, #c4d000 50%, #91cef1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary overflow-x-hidden pb-16 md:pb-0">
+
+    <div id="navbar-placeholder"></div>
+
+    <header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div
+            class="max-w-container-max mx-auto px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter relative z-10">
+            <div class="lg:col-span-7 flex flex-col justify-center items-start">
+                <div
+                    class="inline-block bg-primary/10 border border-primary/20 text-primary px-4 py-1 rounded-full mb-6 font-label-sm text-label-sm tracking-wider uppercase">
+                    Official SCU League
+                </div>
+                <h1 class="font-display-lg text-display-lg mb-6 leading-[1.05] tracking-tighter">
+                    Level Up <span class="text-gradient">Your Game</span>
+                </h1>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mb-10 text-lg opacity-90">
+                    Connect with fellow gamers, compete in professional-grade tournaments, and represent Southern Cross
+                    University on the national stage. Your journey to elite esports starts here.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a class="bg-primary text-on-primary flex items-center gap-2 px-8 py-4 rounded-xl font-headline-lg-mobile text-headline-lg-mobile hover:scale-105 transition-all glow-primary"
+                        href="https://discord.gg/rEEFTuRpam">
+                        Join the Community
+                        <span class="material-symbols-outlined"
+                            style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 hidden lg:flex items-center justify-center relative">
+                <div class="relative w-full aspect-square max-w-[500px]">
+                    <div
+                        class="absolute inset-0 rounded-full border-2 border-dashed border-primary/20 animate-[spin_60s_linear_infinite]">
+                    </div>
+                    <div
+                        class="absolute inset-4 rounded-full border border-tertiary/20 animate-[spin_40s_linear_infinite_reverse]">
+                    </div>
+                    <img class="w-full h-full object-cover rounded-3xl shadow-2xl animate-float border-4 border-surface-container-high/50 relative z-20"
+                        alt="A cinematic gaming tournament setup"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8AwXe7Pbw0LcsOIbQjcOFf1sIlrPZUEXlNHNkQrdsewLpT7jkg47SIds_TadPSAycUdPA628krsSJS_h8KAZHq1ljup2VACy8boQdU2gwRGWKpLSJ2ko5SsJPVd1KFnGxVhl77o23_W-pN--h92V-Ur0Z64SZrqYOp4A_CMw5dNJ44DNsvLBY0B9CUpAmjW1P-n2u7yyiC253o6Rvm6yR3FyF0XOdD2J2BdQ1dpV6_7wdu3QbApb7PPXCFhs6-Nph86TP_uy4BVM" />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 bg-surface-container-lowest">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-gutter">
+                <div>
+                    <h2 class="font-headline-lg text-headline-lg mb-2">Battlegrounds of Choice</h2>
+                    <p class="text-on-surface-variant font-body-md text-body-md">Represent SCU in the titles you master.
+                    </p>
+                </div>
+                <div class="flex gap-4">
+                    <button
+                        class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button
+                        class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div
+                    class="group relative aspect-[3/4] overflow-hidden rounded-2xl glass-card transition-all duration-500 hover:-translate-y-2">
+                    <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoBs5ts_v6mKEzDaI-Tm-O4XGiq3YWxzUTEWFFvQluuLAHd4wWv2bTLr4CQnKdlKy4cDr-Z9ekwajNeXUGO8eb4-vcUnrNdjKbCnOKe25VRiThuab5ZNsQVvyeJXUuAZQA6av4bRQdRxe9VkjSs_bu8yXLBIStSOiklBBnxFE2JZUkt-vN4XjeDc7bC39LKpO1rsjMgaVSIE8DvPer0LUcWw2Af7CaLZCaN3agaRSKs5z5mdkSih8PigGdm2WOPxssB2kgZBAUHHs" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span
+                            class="font-label-sm text-label-sm text-secondary-container mb-2 block tracking-widest">MOBA</span>
+                        <h3 class="font-headline-lg text-headline-lg mb-4">League of Legends</h3>
+                        <div
+                            class="flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 transition-all">
+                            <span class="font-body-md text-body-md">Join the Squad</span>
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group relative aspect-[3/4] overflow-hidden rounded-2xl glass-card transition-all duration-500 hover:-translate-y-2">
+                    <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9Fm0rnhuJ7XHY7RxSfTYx7Q_Z8zgqmHLf54KUYnh2-9_QGQjLrmu8FWgcI-l1REG9JpDumeIb63Xuwc2ZugYUJc-LmTJ3CbIwOniPx7h9tbSHbKiZ-183BF6FN_3X4SL_VNvK9q4GaUEc59ItERj7ooPSsGL8aNqPqseleKCAd5WMPNRXrB75AQAiyppOLtD7odj3MJO9H5CsDH-ogzslMnK4IMz_qI88gcBLxeuDXJ6sOX8PEDJnN966pJd0Y-Tos1ML2fk2pAM" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span
+                            class="font-label-sm text-label-sm text-secondary-container mb-2 block tracking-widest">FPS</span>
+                        <h3 class="font-headline-lg text-headline-lg mb-4">Valorant</h3>
+                        <div
+                            class="flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 transition-all">
+                            <span class="font-body-md text-body-md">Recruiting Now</span>
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group relative aspect-[3/4] overflow-hidden rounded-2xl glass-card transition-all duration-500 hover:-translate-y-2">
+                    <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD93UGCk5XIMjP5Zu6be8F_OE28cRAwfDY77E1fh34mRQX670YF1qXVvq2JBMo_WWCgpzo4T68DSgqUkvmdOTPb5hXDQMzpLzs1yMuiGlairylds0Mtu2AI9vslx4f7vquFEM35PCguS5cpsn_wVsyKrijPlcN7XiArfYVy01piiQy9zhweiafnX7cpwsLfgnGtJ1pfhXgVa_uG9VWVnodQIsZka7i07Nd4kySxf8iTGOgJAIcpms_-Hk1XKiBBET6rzhbQ5mpEujY" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <span
+                            class="font-label-sm text-label-sm text-secondary-container mb-2 block tracking-widest">SPORTS</span>
+                        <h3 class="font-headline-lg text-headline-lg mb-4">Rocket League</h3>
+                        <div
+                            class="flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 transition-all">
+                            <span class="font-body-md text-body-md">Tournament Entry</span>
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="py-24 relative overflow-hidden">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="bg-surface-container rounded-[2rem] p-12 md:p-24 text-center relative border border-primary/10">
+                <div class="relative z-10">
+                    <h2 class="font-display-lg text-display-lg mb-8">Ready to <span
+                            class="text-primary italic">Ascend?</span></h2>
+                    <p class="font-body-md text-body-md text-on-surface max-w-2xl mx-auto mb-12 text-xl">
+                        Join 2,000+ SCU students on our official Discord. Get the latest news, find teammates, and level
+                        up your university experience.
+                    </p>
+                    <a class="inline-flex items-center gap-3 bg-primary text-on-primary px-12 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-all shadow-xl"
+                        href="https://discord.gg/rEEFTuRpam">
+                        Enter the Discord
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">forum</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="w-full py-12 border-t border-outline-variant/20 bg-surface-container-lowest">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-base">
+            <div class="mb-8 md:mb-0">
+                <div class="font-headline-lg text-headline-lg text-primary mb-2">SCU Esports</div>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Connecting players, building
+                    legends at Southern Cross University.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+                <a class="text-on-surface-variant hover:text-tertiary transition-colors font-body-md text-body-md"
+                    href="https://discord.gg/rEEFTuRpam">Discord</a>
+                <a class="text-on-surface-variant hover:text-tertiary transition-colors font-body-md text-body-md"
+                    href="#">Twitch</a>
+                <a class="text-on-surface-variant hover:text-tertiary transition-colors font-body-md text-body-md"
+                    href="#">Twitter</a>
+                <a class="text-on-surface-variant hover:text-tertiary transition-colors font-body-md text-body-md"
+                    href="#">Terms of Service</a>
+                <a class="text-on-surface-variant hover:text-tertiary transition-colors font-body-md text-body-md"
+                    href="#">Privacy Policy</a>
+            </div>
+            <div class="text-on-surface-variant font-label-sm text-label-sm opacity-60">
+                © 2026 Southern Cross University Esports Community
+            </div>
+        </div>
+    </footer>
+
+    <div
+        class="md:hidden fixed bottom-0 left-0 w-full bg-background/95 backdrop-blur-md border-t border-outline-variant/20 px-4 py-3 flex justify-around items-center z-50">
+        <button class="flex flex-col items-center gap-1 text-primary">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+            <span class="text-[10px] font-label-sm">Home</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-on-surface-variant">
+            <span class="material-symbols-outlined">sports_esports</span>
+            <span class="text-[10px] font-label-sm">Matches</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-on-surface-variant">
+            <span class="material-symbols-outlined">groups</span>
+            <span class="text-[10px] font-label-sm">Teams</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-on-surface-variant">
+            <span class="material-symbols-outlined">settings</span>
+            <span class="text-[10px] font-label-sm">Settings</span>
+        </button>
+    </div>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Modular Navigation Component Injection System
+        fetch('navbar.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Navbar network response error.');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                // Extract and execute the nested script inside navbar.html
+                const dynamicScript = document.getElementById('navbar-placeholder').querySelector('script');
+                if (dynamicScript) {
+                    eval(dynamicScript.textContent);
+                }
+            })
+            .catch(err => console.error('Error deploying shared navigation layer:', err));
+    </script>
+</body>
+
+</html>

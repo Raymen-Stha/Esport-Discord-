@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Announcement Dashboard | Southern Cross Esports</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@500&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#003549",
+                        "on-secondary-fixed": "#231b00",
+                        "surface-container-lowest": "#060e20",
+                        "on-tertiary": "#303300",
+                        "on-tertiary-container": "#beca00",
+                        "surface": "#0b1326",
+                        "on-primary-fixed-variant": "#004d68",
+                        "primary-fixed-dim": "#91cef1",
+                        "surface-container": "#171f33",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#31394d",
+                        "outline-variant": "#40484d",
+                        "secondary-fixed": "#ffe07f",
+                        "error-container": "#93000a",
+                        "on-surface": "#dae2fd",
+                        "surface-dim": "#0b1326",
+                        "inverse-primary": "#206584",
+                        "on-tertiary-fixed": "#1b1d00",
+                        "primary-container": "#005573",
+                        "surface-variant": "#2d3449",
+                        "background": "#0b1326",
+                        "surface-tint": "#91cef1",
+                        "surface-container-highest": "#2d3449",
+                        "surface-container-high": "#222a3d",
+                        "tertiary-fixed-dim": "#c4d000",
+                        "on-secondary-container": "#6f5900",
+                        "on-primary-container": "#8bc8eb",
+                        "tertiary-container": "#4e5300",
+                        "primary-fixed": "#c3e8ff",
+                        "secondary-fixed-dim": "#edc200",
+                        "surface-container-low": "#131b2e",
+                        "tertiary-fixed": "#e0ed1d",
+                        "tertiary": "#c4d000",
+                        "on-surface-variant": "#c0c7ce",
+                        "primary": "#91cef1",
+                        "secondary-container": "#fed000",
+                        "inverse-surface": "#dae2fd",
+                        "inverse-on-surface": "#283044",
+                        "outline": "#8a9298",
+                        "on-secondary-fixed-variant": "#564500",
+                        "on-primary-fixed": "#001e2c",
+                        "on-secondary": "#3c2f00",
+                        "on-tertiary-fixed-variant": "#464a00",
+                        "on-error": "#690005",
+                        "secondary": "#fff0c9",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#dae2fd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "unit": "4px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "display-lg": ["Space Grotesk"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(23, 31, 51, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(145, 206, 241, 0.1);
+        }
+
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(196, 208, 0, 0.3);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #060e20;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #222a3d;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #91cef1;
+        }
+    </style>
+</head>
+
+<body class="font-body-md text-body-md bg-background pb-16 md:pb-0">
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto min-h-screen">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+            <section class="lg:col-span-8">
+                <div
+                    class="glass-card p-8 md:p-12 rounded-xl shadow-2xl border border-primary/10 relative overflow-hidden">
+                    <div class="absolute -top-24 -right-24 w-48 h-48 bg-tertiary/10 blur-[100px] rounded-full"></div>
+                    <form class="space-y-8 relative z-10" id="announcement-form">
+                        <div class="space-y-3">
+                            <label
+                                class="flex items-center gap-2 text-primary font-headline-lg-mobile text-headline-lg-mobile">
+                                <span class="material-symbols-outlined text-primary">sensors</span> Target Channel
+                            </label>
+                            <div class="relative group">
+                                <select id="channelSelect" required
+                                    class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-lg focus:border-tertiary focus:ring-1 focus:ring-tertiary appearance-none cursor-pointer transition-all duration-300">
+                                    <option disabled="" selected="" value="">-- Select a Text Channel --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <label
+                                class="flex items-center gap-2 text-primary font-headline-lg-mobile text-headline-lg-mobile">
+                                <span class="material-symbols-outlined text-primary">notifications_active</span> Mention
+                                Role
+                            </label>
+                            <div class="relative">
+                                <select id="roleSelect"
+                                    class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-lg focus:border-tertiary focus:ring-1 focus:ring-tertiary appearance-none cursor-pointer transition-all duration-300">
+                                    <option value="">-- No Mention / Everyone --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <label
+                                class="flex items-center gap-2 text-primary font-headline-lg-mobile text-headline-lg-mobile">
+                                <span class="material-symbols-outlined text-primary">edit_note</span> Announcement Title
+                            </label>
+                            <input id="announceTitle" required
+                                class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-lg focus:border-tertiary focus:ring-1 focus:ring-tertiary transition-all duration-300 placeholder:text-outline-variant"
+                                placeholder="Enter headings here..." type="text" />
+                        </div>
+                        <div class="space-y-3">
+                            <label
+                                class="flex items-center gap-2 text-primary font-headline-lg-mobile text-headline-lg-mobile">
+                                <span class="material-symbols-outlined text-primary">article</span> Message Body
+                            </label>
+                            <textarea id="announceBody" required
+                                class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface p-4 rounded-lg focus:border-tertiary focus:ring-1 focus:ring-tertiary transition-all duration-300 placeholder:text-outline-variant resize-none"
+                                placeholder="Type the main bulk of your text announcement here..." rows="8"></textarea>
+                        </div>
+                        <button
+                            class="w-full bg-tertiary text-on-tertiary py-5 rounded-xl font-headline-lg-mobile text-headline-lg-mobile flex items-center justify-center gap-3 transition-all duration-300 hover:scale-[1.02] glow-hover active:scale-95 group"
+                            type="submit">
+                            <span
+                                class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300 material-symbols-outlined">rocket_launch</span>
+                            Dispatch Announcement
+                        </button>
+                        <p class="text-center text-on-surface-variant text-label-sm font-label-sm opacity-60">
+                            By dispatching, you agree to the SCU Community Guidelines.
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="w-full py-12 bg-surface-container-lowest border-t border-outline-variant/20 relative z-10 mt-auto">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-base">
+            <div class="mb-8 md:mb-0">
+                <span class="font-headline-lg text-headline-lg text-primary">Southern Cross University</span>
+                <p class="text-on-surface-variant mt-2 max-w-xs">Connecting players, building legends, and defining the
+                    future of collegiate gaming.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+                <a class="text-on-surface-variant hover:text-secondary-container transition-colors font-body-md text-body-md"
+                    href="https://discord.gg/rEEFTuRpam">Discord</a>
+                <a class="text-on-surface-variant hover:text-secondary-container transition-colors font-body-md text-body-md"
+                    href="#">Twitch</a>
+                <a class="text-on-surface-variant hover:text-secondary-container transition-colors font-body-md text-body-md"
+                    href="#">Twitter</a>
+                <a class="text-on-surface-variant hover:text-secondary-container transition-colors font-body-md text-body-md"
+                    href="#">Terms of Service</a>
+                <a class="text-on-surface-variant hover:text-secondary-container transition-colors font-body-md text-body-md"
+                    href="#">Privacy Policy</a>
+            </div>
+            <div class="text-center md:text-right">
+                <p class="text-on-surface-variant font-body-md text-body-md">© 2026 Southern Cross University Esports
+                    Community</p>
+            </div>
+        </div>
+    </footer>
+
+    <div
+        class="md:hidden fixed bottom-0 left-0 w-full bg-background/95 backdrop-blur-md border-t border-outline-variant/20 px-4 py-3 flex justify-around items-center z-50">
+        <button class="flex flex-col items-center gap-1 text-on-surface-variant"
+            onclick="window.location.href='index.html'">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[10px] font-label-sm">Home</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-on-surface-variant"
+            onclick="window.location.href='stats.html'">
+            <span class="material-symbols-outlined">sports_esports</span>
+            <span class="text-[10px] font-label-sm">Stats</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-primary"
+            onclick="window.location.href='announcement.html'">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">groups</span>
+            <span class="text-[10px] font-label-sm">News</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-on-surface-variant">
+            <span class="material-symbols-outlined">settings</span>
+            <span class="text-[10px] font-label-sm">Settings</span>
+        </button>
+    </div>
+
+    <script>
+        // --- Initialization Pipelines ---
+        window.onload = function () {
+            loadNavbarLayout();
+            loadDiscordMetadata();
+        };
+
+        // Inject Dynamic Navigation System Header Layer
+        function loadNavbarLayout() {
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) throw new Error('Shared Navbar Layout fetch error.');
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    const nestedScript = document.getElementById('navbar-placeholder').querySelector('script');
+                    if (nestedScript) eval(nestedScript.textContent);
+                })
+                .catch(err => console.error('Failed to resolve modular header payload:', err));
+        }
+
+        // Fetch Server Selection Context Variables from Discord Bot Architecture
+        async function loadDiscordMetadata() {
+            const channelSelect = document.getElementById('channelSelect');
+            const roleSelect = document.getElementById('roleSelect');
+
+            try {
+                const response = await fetch('/api/discord-metadata');
+                if (!response.ok) throw new Error("Could not pull server metadata.");
+
+                const data = await response.json();
+
+                // Populate Text Channels
+                data.channels.forEach(channel => {
+                    const option = document.createElement('option');
+                    option.value = channel.id;
+                    option.className = "bg-surface-container-lowest text-on-surface";
+                    option.innerText = `# ${channel.name}`;
+                    channelSelect.appendChild(option);
+                });
+
+                // Populate Roles
+                data.roles.forEach(role => {
+                    const option = document.createElement('option');
+                    option.value = role.id;
+                    option.className = "bg-surface-container-lowest text-on-surface";
+                    option.innerText = role.name;
+                    roleSelect.appendChild(option);
+                });
+            } catch (err) {
+                console.error("Failed to populate dropdowns:", err);
+            }
+        }
+
+        // Interactive form dispatcher pipeline
+        document.getElementById('announcement-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const channelId = document.getElementById('channelSelect').value;
+            const role = document.getElementById('roleSelect').value;
+            const title = document.getElementById('announceTitle').value;
+            const body = document.getElementById('announceBody').value;
+
+            const btn = this.querySelector('button[type="submit"]');
+            const originalContent = btn.innerHTML;
+
+            // Trigger Dispatching UI State
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> DISPATCHING...';
+            btn.classList.add('opacity-80', 'pointer-events-none');
+
+            const payload = {
+                targetChannelId: channelId,
+                mentionRole: role,
+                message: `# ${title}\n\n${body}`
+            };
+
+            try {
+                const response = await fetch('/api/announcement', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    // Success State Animation
+                    btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> DISPATCHED SUCCESSFULLY';
+                    btn.classList.replace('bg-tertiary', 'bg-primary');
+                    btn.classList.replace('text-on-tertiary', 'text-on-primary');
+                    this.reset();
+                } else {
+                    throw new Error("Server rejected request layout.");
+                }
+            } catch (err) {
+                console.error(err);
+                btn.innerHTML = '<span class="material-symbols-outlined">error</span> TRANSMISSION FAILED';
+                btn.classList.replace('bg-tertiary', 'bg-error-container');
+                btn.classList.replace('text-on-tertiary', 'text-error');
+            } finally {
+                // Revert layout context back to interactive default after a short delay
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.className = btn.className.replace(/bg-(primary|error-container)/, 'bg-tertiary');
+                    btn.className = btn.className.replace(/text-(on-primary|error)/, 'text-on-tertiary');
+                    btn.classList.remove('opacity-80', 'pointer-events-none');
+                }, 3000);
+            }
+        });
+
+        // Input focus styling
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.classList.add('ring-2', 'ring-tertiary/20');
+            });
+            input.addEventListener('blur', () => {
+                input.classList.remove('ring-2', 'ring-tertiary/20');
+            });
+        });
+    </script>
+</body>
+
+</html>

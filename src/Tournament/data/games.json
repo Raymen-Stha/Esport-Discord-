@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "name": "VALORANT",
+    "alias": [
+      "valorant",
+      "val"
+    ],
+    "channelId": "1400408532276215881",
+    "announcementChannelId": "1400408532276215881",
+    "summaryChannelId": "1400408532276215881",
+    "captainRoleId": "1534768284476641371",
+    "roleId": "1300268343483301918",
+    "squadSize": 5,
+    "benchSize": 2
+  },
+  {
+    "id": "2",
+    "name": "Rocket League",
+    "alias": [
+      "rocket",
+      "rl",
+      "rocket league"
+    ],
+    "channelId": "1438772289080254606",
+    "captainRoleId": "1447496383694256208"
+  },
+  {
+    "id": "3",
+    "name": "League Of Legends",
+    "alias": [
+      "lol",
+      "league"
+    ],
+    "channelId": "1438787216737990610",
+    "captainRoleId": "1447496612189063168"
+  },
+  {
+    "id": "4",
+    "name": "Marvel Rivals",
+    "alias": [
+      "marvel"
+    ],
+    "channelId": "1438787508287436980",
+    "captainRoleId": "1447496659528378449"
+  },
+  {
+    "id": "5",
+    "name": "Rainbow Six Siege",
+    "alias": [
+      "r6s",
+      "siege"
+    ],
+    "channelId": "1438787757094674534",
+    "captainRoleId": "1447496707802484806"
+  },
+  {
+    "id": "6",
+    "name": "CS:2",
+    "alias": [
+      "cs2",
+      "counterstrike"
+    ],
+    "channelId": "1402863044895440966",
+    "captainRoleId": "1447496820081494087"
+  },
+  {
+    "id": "7",
+    "name": "Dota 2",
+    "alias": [
+      "dota",
+      "dota2"
+    ],
+    "channelId": "1438788342295535706",
+    "captainRoleId": "1447496904590704701"
+  },
+  {
+    "id": "8",
+    "name": "Fortnite",
+    "alias": [
+      "fortnite"
+    ],
+    "channelId": "1438788417006362658",
+    "captainRoleId": "1447496969156451420"
+  }
+]

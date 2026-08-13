@@ -1,0 +1,40 @@
+[
+  {
+    "id": "a7fc9fa1",
+    "tournamentId": "04da12cc",
+    "gameId": "1",
+    "teamName": "SCU1",
+    "opponent": "USW",
+    "matchDate": "2026-08-12",
+    "matchTime": "2:16 PM",
+    "notes": "",
+    "status": "completed",
+    "announcementMessageId": "1536936516113273025",
+    "result": "win",
+    "scoreTeam": 13,
+    "scoreOpponent": 1,
+    "createdAt": "2026-08-12T03:16:03.698Z",
+    "updatedAt": "2026-08-12T03:34:00.582Z",
+    "score": "13 - 1",
+    "resultNotes": "",
+    "completedAt": "2026-08-12T03:34:11.949Z"
+  },
+  {
+    "id": "fe3c1f80",
+    "tournamentId": "04da12cc",
+    "gameId": "1",
+    "teamName": "VALORANT",
+    "opponent": "USW",
+    "matchDate": "2026-08-12",
+    "matchTime": "5:35 PM",
+    "notes": "",
+    "status": "cancelled",
+    "announcementMessageId": "1536986344142798860",
+    "result": null,
+    "scoreTeam": null,
+    "scoreOpponent": null,
+    "createdAt": "2026-08-12T06:34:16.156Z",
+    "updatedAt": "2026-08-12T06:34:52.693Z",
+    "cancelledAt": "2026-08-13T02:28:51.789Z"
+  }
+]

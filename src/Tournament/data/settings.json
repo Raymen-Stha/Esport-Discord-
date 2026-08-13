@@ -1,0 +1,9 @@
+{
+  "captainReminderEnabled": true,
+  "playerReminderEnabled": true,
+  "finalReminderEnabled": true,
+  "summaryEnabled": true,
+  "captainReminderHours": 24,
+  "playerReminderHours": 6,
+  "finalReminderHours": 1
+}
