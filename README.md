@@ -71,3 +71,33 @@ SCUR/
 ├── main.js                     # Application entry point
 ├── package.json
 └── package-lock.json
+```
+
+# Configure Environment Variables:
+- Create a .env file in the root directory:
+
+## Code snippet
+```
+# Discord  Secret Keys
+
+DISCORD_TOKEN=
+CLIENT_ID=
+GUILD_ID=
+
+#Emailer Secret Keys
+EMAIL_USER=
+EMAIL_PASS=
+
+#Encryption key for emails
+ENCRYPTION_KEY=
+
+#localhost port
+PORT=5000
+
+#image spam 
+GEMINI_API_KEY=
+
+#Tournament API authentication key
+TOURNAMENT_API_KEY=
+
+```
